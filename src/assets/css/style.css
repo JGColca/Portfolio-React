@@ -29,7 +29,7 @@ section {
   transform-origin: center center;
 }
 
-section:nth-child(odd) {
+.rotright {
   /*background: #000;*/
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
@@ -39,7 +39,7 @@ section:nth-child(odd) {
   margin: auto auto;
 }
 
-section:nth-child(even) {
+.rotleft {
   /*background: #e90089;*/
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
@@ -50,11 +50,11 @@ section:nth-child(even) {
 }
 
 .chikobiko {
-  transform: rotate(5deg);
+  transform: rotate(-5deg);
 }
 
 .bangbang {
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
 }
 
 .container {
