@@ -1,7 +1,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 class Footer extends Component {
+  componentDidMount() {
+    let scrollUp = document.querySelector(".scrollup");
+
+    let body = document.querySelector("body");
+    let html = document.querySelector("html");
+
+    window.scroll(function() {
+      if (window.scrollTop >= 600) {
+        scrollUp.fadeIn("slow");
+      } else {
+        scrollUp.fadeOut("slow");
+      }
+    });
+
+    scrollUp.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0, // could be negative value
+        behavior: "smooth"
+      });
+    });
+  }
   render() {
     return (
       <div>

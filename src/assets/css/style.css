@@ -7,17 +7,29 @@ Author URI: http://bootstrapthemes.co
    ========================================================================== */
 html,
 body {
-  background-image: url(../images/background-board-carpentry-326333-min.jpg);
-  /* background-size: contain; */
+  background-image: url(../images/cork-1374281_1920.jpg);
+  /* background-size: cover; */
   font-size: 15px;
   color: #ffffff;
   width: 100%;
+  height: 100%;
   padding: 0;
   margin-left: 0;
   margin-right: 0;
   margin-top: auto;
   margin-bottom: auto;
-  font-family: "opensans_light";
+  font-family: "open_sanslight";
+  font-weight: bold;
+}
+
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  padding-top: 20px;
 }
 
 section {
@@ -85,6 +97,14 @@ a:focus {
   outline: none;
 }
 
+NavLink,
+NavLink:hover,
+NavLink:active,
+NavLink:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 #emailLink {
   color: #60be86;
 }
@@ -104,6 +124,14 @@ a:focus {
 a,
 button,
 a span {
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+NavLink,
+button,
+NavLink span {
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -203,7 +231,7 @@ h3 {
 h4,
 h5 {
   /*font-family: 'roboto', sans-serif;*/
-
+  font-weight: bold;
   margin: auto;
   line-height: 2rem;
 }
@@ -211,6 +239,7 @@ h5 {
 h1 {
   font-size: 3rem;
   line-height: 4rem;
+  font-weight: 300;
 }
 
 h2 {
@@ -221,6 +250,7 @@ h2 {
 }
 
 h3 {
+  font-weight: 300;
   margin-bottom: 0.9rem;
   font-size: 2.1rem;
   line-height: 2.5rem;
@@ -350,11 +380,12 @@ section .subtitle h5 {
 section .title-half h2 {
   font-size: 3rem;
   line-height: 4rem;
-
+  font-weight: 300;
   margin-bottom: 1.4rem;
 }
 
 section .subtitle-half h5 {
+  font-weight: 100;
   font-size: 17px;
 }
 
@@ -450,7 +481,7 @@ Button
   letter-spacing: 1px;
   margin: 0;
   font-size: 16px;
-
+  font-weight: 300;
   border-radius: 0;
   margin-top: 30px;
 }
@@ -760,11 +791,27 @@ input:-ms-input-placeholder {
   position: inherit;
   text-align: right;
   padding-right: 5%;
+  padding-top: 3%;
 }
 
 .cd-menu-trigger span {
-  background-color: #60be86;
-  margin: auto auto;
+  color: #ffffff;
+  margin: 0;
+  width: 3em;
+  height: 0.15em;
+  line-height: 1em;
+  background-color: #ffffff;
+}
+
+.menuText {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  margin-right: -4px;
+  color: #ffffff;
 }
 
 .menu-scroll {
@@ -798,8 +845,20 @@ input:-ms-input-placeholder {
   background-color: transparent;
 }
 
+.main_menu_bg .navbar-default .navbar-nav > li > NavLink:hover,
+.navbar-default .navbar-nav > li > NavLink:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
 .menu-scroll.main_menu_bg .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
+  color: #ffd600;
+  background-color: transparent;
+}
+
+.menu-scroll.main_menu_bg .navbar-default .navbar-nav > li > NavLink:hover,
+.navbar-default .navbar-nav > li > NavLink:focus {
   color: #ffd600;
   background-color: transparent;
 }
@@ -818,6 +877,16 @@ input:-ms-input-placeholder {
   font-size: 18px;
 }
 
+.main_menu_bg .navbar-nav > li > NavLink {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  border-radius: 10px;
+  font-family: "big_johnregular";
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
 /* Home Section */
 
 .main_area {
@@ -826,7 +895,7 @@ input:-ms-input-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow-y: visible;
 }
 
 .home {
@@ -1107,7 +1176,7 @@ blockquote {
 }
 
 .single_tinyforest blockquote p {
-  font-weight: 300;
+  font-weight: bold;
   margin-left: 10%;
 }
 
@@ -1164,7 +1233,7 @@ blockquote-reverse {
 }
 
 .single_coolautumn .blockquote-reverse p {
-  font-weight: 300;
+  font-weight: bold;
   margin-right: 10%;
 }
 
@@ -1198,7 +1267,7 @@ blockquote-reverse {
 }
 
 .single_drivinghome blockquote p {
-  font-weight: 300;
+  font-weight: bold;
   margin-left: 10%;
 }
 
@@ -1252,7 +1321,7 @@ blockquote-reverse {
   width: 100%;
   margin: 0 auto;
   color: #fff;
-  font-weight: 300;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -1591,8 +1660,14 @@ a.s_f_9:hover {
 .footer {
   background: #383838;
   z-index: 100;
-  position: relative;
+  /* position: relative; */
   text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
 }
 
 .footer p {
@@ -1604,7 +1679,10 @@ a.s_f_9:hover {
   color: #60be86;
   font-family: "open_sansbold";
 }
-
+.footer p NavLink {
+  color: #60be86;
+  font-family: "open_sansbold";
+}
 .footer p i {
   color: red;
   font-size: 16px;
@@ -1645,4 +1723,43 @@ a.s_f_9:hover {
   margin-top: -7px;
   margin-left: -6px;
   text-decoration: none;
+}
+
+.example-appear.example-appear-active {
+  animation: mymove 2s ease-in-out;
+}
+
+#pushPinImage {
+  position: absolute;
+  z-index: 2;
+  height: 75px;
+  left: 50%;
+  animation: pushPin 2.5s ease-in-out;
+}
+
+@keyframes mymove {
+  from {
+    transform: translate(-500%, 0);
+  }
+  to {
+    transform: translate(0%, 0);
+  }
+}
+
+@keyframes pushPin {
+  0% {
+    transform: translate(1000%, 2000%);
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  90% {
+    transform: translate(1000%, 500%);
+    opacity: 100;
+  }
+
+  100% {
+    transform: translate(0%, 0);
+  }
 }

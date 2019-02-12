@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "../assets/css/style.css";
-import "../assets/css/responsive.css";
 import features_image from "../assets/images/featureshats-min.jpg";
 
 class Features extends Component {

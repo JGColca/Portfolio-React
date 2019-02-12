@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { ReCaptcha } from "react-recaptcha-google";
 
-import "../assets/css/style.css";
-import "../assets/css/responsive.css";
 import contact_image from "../assets/images/contactbluebonnet-min.jpg";
 
 const API_PATH = "http://localhost:3001/api/contact/form.php";

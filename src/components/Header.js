@@ -1,62 +1,75 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-const inline = {
-  display: "inline"
-};
+import { NavLink } from "react-router-dom";
+
 class Header extends Component {
+  componentDidMount() {
+    let cdMenuTrigger = document.querySelector(".cd-menu-trigger"),
+      mainNav = document.getElementById("main-nav"),
+      cdCloseMenu = document.querySelector(".cd-close-menu");
+
+    cdMenuTrigger.addEventListener("click", function(event) {
+      event.preventDefault();
+      mainNav.classList.add("is-visible");
+    });
+    cdCloseMenu.addEventListener("click", function(event) {
+      event.preventDefault();
+      mainNav.classList.remove("is-visible");
+    });
+  }
   render() {
     return (
       <div>
-        <nav>
+        <nav id="main-nav">
           <ul>
-            <li style={inline}>
-              <Link to="Home">
-                <span>Home</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/">
+                <span className="navSpan">Home</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="About">
-                <span>About Me</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/about">
+                <span className="navSpan">About Me</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="#Skills">
-                <span>Skills</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/features">
+                <span className="navSpan">Features</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="Features">
-                <span>Features</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/projects">
+                <span className="navSpan">Projects</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="Projects">
-                <span>Projects</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/testimonial">
+                <span className="navSpan">Testimonial</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="Testimonial">
-                <span>Testimonial</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/blogs">
+                <span className="navSpan">Blogs</span>
+              </NavLink>
             </li>
-            <li style={inline}>
-              <Link to="Contact">
-                <span>Contact</span>
-              </Link>
+            <li>
+              <NavLink className="navLink" to="/contact">
+                <span className="navSpan">Contact</span>
+              </NavLink>
             </li>
           </ul>
-          <a href="/" className="cd-close-menu">
+          <NavLink to="#" className="cd-close-menu">
             <span>Close</span>
-          </a>
+          </NavLink>
         </nav>
 
-        {/* <div className="div-menu">
+        <div className="div-menu">
           <header className="cd-header">
-            <Link className="cd-menu-trigger" to="#main-nav">
+            <text className="menuText">Menu</text>
+            <NavLink className="cd-menu-trigger" to="#main-nav">
               <span />
-            </Link>
+            </NavLink>
           </header>
-        </div> */}
+        </div>
       </div>
     );
   }

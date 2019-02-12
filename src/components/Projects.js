@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "../assets/css/style.css";
-import "../assets/css/responsive.css";
 import drivinghome_image from "../assets/images/drivinghome-min.jpg";
 import coolautumn_image from "../assets/images/m2sistersbgimg-min.jpg";
 import tinyforest_image from "../assets/images/testApp-min.jpg";
@@ -10,24 +8,25 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        <section id="drivinghome" class="drivinghome rotleft">
+        <section id="drivinghome" className="drivinghome rotleft">
           <div id="projects" />
           <img id="drivinghome_image" src={drivinghome_image} alt="" />
-          <div class="features_overlay">
-            <div class="container bangbang">
-              <div class="row">
-                <div class="head_title text-center">
+          <div className="features_overlay">
+            <div className="container bangbang">
+              <div className="row">
+                <div className="head_title text-center">
                   <h2>
-                    <i class="fa fa-star" /> Project <i class="fa fa-star" />
+                    <i className="fa fa-star" /> Project{" "}
+                    <i className="fa fa-star" />
                   </h2>
                 </div>
-                <div class="main_drivinghome">
-                  <div class="col-md-5">
+                <div className="main_drivinghome">
+                  <div className="col-md-5">
                     <div
-                      class="single_drivinghome wow fadeInRight"
+                      className="single_drivinghome wow fadeInRight"
                       data-wow-duration="2s"
                     >
-                      <div class="date">11/19/2018</div>
+                      <div className="date">11/19/2018</div>
                       <h3>DC Ride</h3>
                       <blockquote>
                         <p>
@@ -50,7 +49,7 @@ class Projects extends Component {
                         href="http://dcride.herokuapp.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-site"
+                        className="btn btn-white project-site"
                       >
                         View Project
                       </a>
@@ -58,7 +57,7 @@ class Projects extends Component {
                         href="https://github.com/JGColca/DCRide"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-code"
+                        className="btn btn-white project-code"
                       >
                         View Code
                       </a>
@@ -70,27 +69,28 @@ class Projects extends Component {
           </div>
         </section>
 
-        <section id="coolautumn" class="coolautumn rotright">
+        <section id="coolautumn" className="coolautumn rotright">
           <img id="coolautumn_image" src={coolautumn_image} alt="" />
-          <div class="features_overlay">
-            <div class="container chikobiko">
-              <div class="row">
-                <div class="head_title text-center">
+          <div className="features_overlay">
+            <div className="container chikobiko">
+              <div className="row">
+                <div className="head_title text-center">
                   <h2>
-                    <i class="fa fa-star" /> Project <i class="fa fa-star" />
+                    <i className="fa fa-star" /> Project{" "}
+                    <i className="fa fa-star" />
                   </h2>
                 </div>
-                <div class="main_coolautumn">
-                  <div class="col-md-offset-7">
+                <div className="main_coolautumn">
+                  <div className="col-md-offset-7">
                     <div
-                      class="single_coolautumn text-right wow fadeInLeft"
+                      className="single_coolautumn text-right wow fadeInLeft"
                       data-wow-duration="1.5s"
                     >
-                      <div class="date">Coming Soon</div>
+                      <div className="date">Coming Soon</div>
                       <h3>
                         M<sup>2</sup> Sisters
                       </h3>
-                      <blockquote class="blockquote-reverse">
+                      <blockquote className="blockquote-reverse">
                         <p>
                           COMIN SOON: An e-commerce site powered by React.js and
                           Redux.js. Site will sell crafts designed and made by
@@ -101,7 +101,7 @@ class Projects extends Component {
                         href="/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-site"
+                        className="btn btn-white project-site"
                       >
                         View Project
                       </a>
@@ -109,7 +109,7 @@ class Projects extends Component {
                         href="/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-code"
+                        className="btn btn-white project-code"
                       >
                         View Code
                       </a>
@@ -121,23 +121,24 @@ class Projects extends Component {
           </div>
         </section>
 
-        <section id="tinyforest" class="tinyforest rotleft">
+        <section id="tinyforest" className="tinyforest rotleft">
           <img id="tinyforest_image" src={tinyforest_image} alt="" />
-          <div class="features_overlay">
-            <div class="container bangbang">
-              <div class="row">
-                <div class="head_title text-center">
+          <div className="features_overlay">
+            <div className="container bangbang">
+              <div className="row">
+                <div className="head_title text-center">
                   <h2>
-                    <i class="fa fa-star" /> Project <i class="fa fa-star" />
+                    <i className="fa fa-star" /> Project{" "}
+                    <i className="fa fa-star" />
                   </h2>
                 </div>
-                <div class="main_tinyforest">
-                  <div class="col-md-5">
+                <div className="main_tinyforest">
+                  <div className="col-md-5">
                     <div
-                      class="single_tinyforest wow fadeInRight"
+                      className="single_tinyforest wow fadeInRight"
                       data-wow-duration="1.5s"
                     >
-                      <div class="date">10/28/2018</div>
+                      <div className="date">10/28/2018</div>
                       <h3>Test Creator</h3>
                       <blockquote>
                         <p>
@@ -154,7 +155,7 @@ class Projects extends Component {
                         href="http://test-creator.surge.sh/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-site"
+                        className="btn btn-white project-site"
                       >
                         View Project
                       </a>
@@ -162,7 +163,7 @@ class Projects extends Component {
                         href="https://github.com/jcattanach/quiz-project"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-white project-code"
+                        className="btn btn-white project-code"
                       >
                         View Code
                       </a>

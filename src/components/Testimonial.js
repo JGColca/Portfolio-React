@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "../assets/css/style.css";
-import "../assets/css/responsive.css";
 import testimonial_image from "../assets/images/testimonialmic-min.jpg";
 
 class Testimonial extends Component {
